@@ -9,7 +9,7 @@ const modalBackground = document.getElementById("modal-background");
 let userText = "";
 let errorCount = 0;
 // correction: assigned the value of startTime 
-let startTime = 0;
+let startTime = null;
 let questionText = "";
 
 // Load and display question
@@ -82,9 +82,9 @@ const gameOver = () => {
   display.classList.add("inactive");
   // show result
   resultModal.innerHTML += `
-    <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <h1>Finished!</h1><br>
+    <p>You took: <span class="bold">${timeTaken}</span> seconds</p><br>
+    <p>You made <span class="bold red">${errorCount}</span> mistakes</p><br>
     <button onclick="closeModal()">Close</button>
   `;
 
@@ -112,7 +112,6 @@ const start = () => {
   const startCountdown = setInterval(() => {
     // correction: used `` instead of '' for dynamic use
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
-
     // finished timer
     // correction: used === instead of ==
     if (count === 0) {

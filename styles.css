@@ -63,18 +63,18 @@ body {
 
 #result {
   position: fixed;
-  /* correction: edited style values to center result */
+  /* correction: edited style values to center result container */
   top: 15%;
   left: 25%;
   transform: translate(25%, 25%);
   height: 250px;
   width: 400px;
+  padding: 2rem;
   background-color: #171717;
   border-radius: 15px;
   border: 2px solid #9dffad;
   color: white;
   text-align: center;
-  padding: 2rem;
 }
 
 #show-time {
