@@ -1,15 +1,362 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
     <title>Blog</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>New Blogs</h1>
+
+    <div class="container">
+        <header class="blog-header lh-1 py-3">
+            <div class="row flex-nowrap justify-content-center align-items-center">
+                <div class="col-4 text-center">
+                    <a class="blog-header-logo text-dark" href="#">Web Blog</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-around">
+                <a class="p-2 link-secondary" href="#storage">Storage</a>
+                <a class="p-2 link-secondary" href="#scopes">Scope</a>
+                <a class="p-2 link-secondary" href="#eventLoop">Event Loop</a>
+                <a class="p-2 link-secondary" href="#undefined">Get Undefined</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">Featured blog posts</h1>
+                <p class="lead my-3">In this page, you will find answers to the given questions, organised as blog
+                    posts.</p>
+                <p class="lead mb-0 text-white fw-bold">Author: Tazrian Ibne Amin</p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Event Loop</strong>
+                        <h3 class="mb-0">Featured post</h3>
+                        <div class="mb-1 text-muted">Sep 15</div>
+                        <p class="card-text mb-auto">Get to know how Event Loop functions in Javascript.</p>
+                        <a href="#eventLoop" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img width="270"
+                            src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop/the_javascript_runtime_environment_example.svg"
+                            alt="event loop image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Scopes</strong>
+                        <h3 class="mb-0">Featured Post</h3>
+                        <div class="mb-1 text-muted">Sep 15</div>
+                        <p class="mb-auto">Get to know about Javascript scopes and their use in different cases.</p>
+                        <a href="#scopes" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img width="250" height="250"
+                            src="https://www.stevethedev.com/storage/app/uploads/public/5aa/d54/a47/5aad54a47d2e0123286333.png"
+                            alt="scopes image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                    Articles
+                </h3>
+
+                <article class="blog-post" id="storage">
+                    <h2 class="blog-post-title mb-1">Local Storage Vs. Session Storage</h2>
+                    <p class="blog-post-meta">September 15, 2022 by <a target="_blank"
+                            href="https://web.facebook.com/profile.php?id=100076012728824">Tazrian</a>
+                    </p>
+
+                    <h3>Session Storage</h3>
+                    <p>Whenever a document is loaded in a particular tab in the browser, a unique page session gets
+                        created and assigned to that particular tab. This is called Session Storage. The functions of
+                        sessionStorage are:</p>
+                    <ul>
+                        <li>It stores data in browser for a session.</li>
+                        <li>It saves data in key/value pairs in the browser.</li>
+                        <li>It deletes data when the browser is closed.</li>
+                        <li>Data is not available for future sessions.</li>
+                        <li>It can store data upto 5MB.</li>
+                    </ul>
+                    <p>The page session is valid only for that particular page loaded in a tab. Opening a page in a new
+                        tab or window creates a new session with the value of the top-level browsing context, which
+                        differs from how session cookies work. Opening multiple tabs/windows with the same URL creates
+                        sessionStorage for each tab/window. Duplicating a tab copies the tab's sessionStorage into the
+                        new tab.</p>
+                    <hr>
+
+                    <h2>Highlights</h2>
+                    <blockquote class="blockquote">
+                        <p>"While data in localStorage doesn't expire, data in sessionStorage is cleared when the page
+                            session ends."</p>
+                    </blockquote>
+                    <hr>
+
+                    <h3>Local Storage</h3>
+                    <p>Local Storage is a read-only property of the window interface that allows us to access a Storage
+                        object for the Document's origin. The characteristics of
+                        localStorage are:</p>
+                    <ul>
+                        <li>It stores data in browser without any expiration date.</li>
+                        <li>It saves data in key/value pairs in the browser.</li>
+                        <li>It does not delete data when the browser is closed.</li>
+                        <li>Data is available for future sessions.</li>
+                        <li>It can store data upto 10MB.</li>
+                    </ul>
+                    <p> localStorage is similar to sessionStorage, except that while
+                        localStorage data has no expiration time, sessionStorage data gets cleared when the page session
+                        ends — that is, when the page is closed. So, in case of Local Storage, the stored data is saved
+                        across browser sessions. When data is received in local storage, it is stored as a
+                        <strong>string</strong>.
+                    </p>
+                </article>
+                <article class="blog-post" id="scopes">
+                    <h2 class="blog-post-title mb-1">Global Scope Vs. Block Scope</h2>
+                    <p class="blog-post-meta">September 15, 2022 by <a target="_blank"
+                            href="https://web.facebook.com/profile.php?id=100076012728824">Tazrian</a>
+                    </p>
+
+                    <h3>Scope</h3>
+                    <p>The scope is the current context of execution in which values and expressions are
+                        <strong>visible</strong> or can be referenced. If a variable or expression is not in the current
+                        scope, it will not be available for use.
+                    </p>
+                    <h3>Global Scope</h3>
+                    <p>Global scope is the default scope for all code running in
+                        script mode. It is visible in all other scopes. If any variable or expression is declared in
+                        global scope, it can be used anywhere in the document.</p>
+                    <hr>
+
+                    <h3>Block Scope</h3>
+                    <p>The scope created with a pair of curly braces '{ }' is known as block scope. So, if any variable
+                        or expression is declared within the block, it cannot be used outside of the block. Function,
+                        loops, and conditional statements create block scopes in a document.</p>
+                </article>
+                <article class="blog-post" id="eventLoop">
+                    <h2 class="blog-post-title mb-1">How Event Loop Functions?</h2>
+                    <p class="blog-post-meta">September 15, 2022 by <a target="_blank"
+                            href="https://web.facebook.com/profile.php?id=100076012728824">Tazrian</a>
+                    </p>
+                    <h3>Event Loop</h3>
+                    <p>JavaScript has a runtime model based on an <strong>event loop</strong>, which is responsible for
+                        executing the code, collecting and processing events, and executing queued sub-tasks.<br>We know
+                        that Javascript is a single threaded language. This means it has one call stack and one
+                        memory heap. But it can also handle asynchronous calls using event loop. In this case, the codes
+                        which requires time to load (like fetching data from another API, or calling setTimeOut()
+                        function) are kept in a queue so that they can take time to process the data and then be ready
+                        for execution. On the other hand, other codes in the call stack are executed immediately. When
+                        the stack becomes empty, then the processed codes are executed one by one from the queue. This
+                        process of looping is called event loop.</p>
+                    <h3>Stack:</h3>
+                    <p>When some code is run, each frame in a stack is created containing references to the function's
+                        arguments and local variables. When the first function calls the second, another frame is
+                        created and pushed on top of the first one, containing references to the second function's
+                        arguments and local variables. <br>When the second function returns, the top frame element is
+                        popped out of the stack. Then the first function returns and the stack becomes empty.</p>
+                    <h3>Heap:</h3>
+                    <p>Objects are allocated in a heap which is just a name to indicate a large region of memory.</p>
+                    <h3>Queue:</h3>
+                    <p>JavaScript runtime uses a message queue which contains a list of messages to be processed. Each
+                        message has an associated function that gets called to handle the message. <br>At some point
+                        during the event loop, the runtime starts handling the messages on the queue, starting with the
+                        oldest one. To do so, the message is removed from the queue and its corresponding function is
+                        called with the message as an input parameter. As always, calling a function creates a new stack
+                        frame for that function's use. <br>The processing of functions continues until the stack is once
+                        again empty. Then, the event loop will process the next message in the queue (if there is one).
+                    </p>
+                </article>
+                <article class="blog-post" id="undefined">
+                    <h2 class="blog-post-title mb-1">How many ways to get <em>undefined</em> ?</h2>
+                    <p class="blog-post-meta">September 15, 2022 by <a target="_blank"
+                            href="https://web.facebook.com/profile.php?id=100076012728824">Tazrian</a>
+                    </p>
+                    <h3>Undefined Value</h3>
+                    <p>When any variable or expression is not defined, we get undefined. There are about 8 scenarios
+                        where we can get undefined. They are:</p>
+                    <ol>
+                        <li>Variable that is not initialized</li>
+                        <code> Code:<br>
+                            let first;
+                            console.log(first);
+                        </code>
+                        <li>Any function without a return</li>
+                        <code> Code:<br>
+                            function second(a, b) {
+                            const result = a + b;
+                            }
+                            console.log(second(2, 4));
+                        </code>
+                        <li>Parameter that is not passed in any function</li>
+                        <code> Code:<br>
+                            function third(a, b, c, d) {
+                            const total = a + b + c + d;
+                            console.log(a, b, c, d);
+                            }
+                            third(5, 7);
+                        </code>
+                        <li>If what to return from a function is not defined</li>
+                        <code> Code:<br>
+                            function nonNegative(a, b) {
+                            if (a < 0 || b < 0) { return; } return a + b; } console.log(nonNegative(3, -9)); </code>
+                                <li>A property that doesn't exist on an object</li>
+                                <code> Code:<br>
+                                    const newStudent = { id: 3, name: 'ABC', age: 32 };
+                                    console.log(newStudent.age, newStudent.salary);
+                                </code>
+                                <li>If accessing array elements out of the index range</li>
+                                <code> Code:<br>
+                                    const array = [21, 32, 34, 32, 45];
+                                    console.log(array[0], array[6], array[39]);
+                                </code>
+                                <li>If we delete an element from an array using index and then try to access it</li>
+                                <code> Code:<br>
+                                    const array = [21, 32, 34, 32, 45];
+                                    delete array[0];
+                                    console.log(array[0], array[6], array[39]);
+                                    console.log(array);
+                                </code>
+                                <li>If we assign undefined as a value</li>
+                                <code> Code:<br>
+                                    const shoe = undefined;
+                                    console.log(shoe);
+                                </code>
+                    </ol>
+                </article>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic">About</h4>
+                        <p class="mb-0">In this web blog, you will find the best articles written on javascript core
+                            concepts. It will help you to clear your concepts.</p>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Jump to sections</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#storage">Storage</a></li>
+                            <li><a href="#scopes">Scope</a></li>
+                            <li><a href="#eventLoop">Event Loop</a></li>
+                            <li><a href="#undefined">Get Undefined</a></li>
+                        </ol>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Contact</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://github.com/tazrian-amin">GitHub</a></li>
+                            <li><a href="https://web.facebook.com/profile.php?id=100076012728824">Facebook</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="blog-footer">
+        <p>Used Blog template from <a href="https://getbootstrap.com/">Bootstrap</a>.</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
